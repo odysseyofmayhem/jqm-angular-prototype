@@ -1,0 +1,17 @@
+{
+  "name": "JQMAngular-Template",
+  "version": "0.0.1",
+  "description": "Super awesome test.",
+  "keywords": [],
+  "homepage": "http://angularjs.org/",
+  "author": "Lee McNeil",
+  "main": "server/server.js",
+  "dependencies": {
+    "connect": ">= 2.3.5",
+    "express": ">= 2.5.11"
+  },
+  "engines": {
+    "node": ">= 0.8.4"
+  },
+  "license": "MIT"
+}
