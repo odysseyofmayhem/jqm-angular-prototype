@@ -1,25 +1,30 @@
-<div class="page" data-role="page" ng-controller="listCtrl" data-add-back-btn="true">
-		    	<div data-role="header">
-				  
-				  <h1 class="title">Detail View</h1>
-				</div>
+<!-- List Detail template -->
+<div class="page ng-cloak" data-role="page" id="list_detail" ng-controller="listCtrl" data-add-back-btn="true" ngm-pageshow="init()">
+	<div data-role="header">
+	  
+	  <h1 class="title">Detail View</h1>
+	</div>
 
-				<div class="content">
-					<form>
-					  <div class="input-group">
-					    <div class="input-row">
-					      <label>Full name</label>
-					      <input type="text" placeholder="{{dataSet[listSelected].firstname}} {{dataSet[listSelected].lastname}}" disabled>
-					    </div>
-					    <div class="input-row">
-					      <label>Location</label>
-					      <input type="text" placeholder="{{dataSet[listSelected].location}}" disabled>
-					    </div>
-					    <div class="input-row">
-					      <label>Rate</label>
-					      <input type="text" placeholder="{{dataSet[listSelected].rate}}" disabled>
-					    </div>
-					  </div>
-					</form>
-				</div>
+	<div class="content" >
+		<form>
+		  <div class="input-group">
+		    <div class="input-row">
+		      <label>First name</label>
+		      <input type="text" ng-model="users.dataSet[users.pointer].firstname" >
 		    </div>
+		    <div class="input-row">
+		      <label>Last name</label>
+		      <input type="text" ng-model="users.dataSet[users.pointer].lastname" >
+		    </div>
+		    <div class="input-row">
+		      <label>Location</label>
+		      <input type="text" ng-model="users.dataSet[users.pointer].location" >
+		    </div>
+		    <div class="input-row">
+		      <label>Rate</label>
+		      <input type="text" ng-model="users.dataSet[users.pointer].rate" >
+		    </div>
+		  </div>
+		</form>
+	</div>
+</div>

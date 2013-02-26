@@ -1,44 +1,42 @@
-<div class="page" data-role="page" ng-controller="formCtrl">
-		    	<div data-role="header">
-				  <a class="button-prev" href="#/home">Home</a>
-				  <h1 class="title">General Pane</h1>
-				</div>
+<!-- Form template -->
+<div class="page ng-cloak" data-role="page" id="form" ng-controller="formCtrl">
+	<div data-role="header" class="status-bar">
+	  <div class="status-header-black">{{settings.userType}}</div>
+	  <a class="button-prev" ngm-tap="nav('/home')">Home</a>
+	  <h1 class="title">General Pane</h1>
+	</div>
 
-				<div class="content">
-					<div class="content-padded">
-						<form>
-						  <div class="input-group">
-						    <div class="input-row">
-						      <label>Full name</label>
-						      <input type="text" placeholder="Mister Ratchet">
-						    </div>
-						    <div class="input-row">
-						      <label>Email</label>
-						      <input type="email" placeholder="ratchetframework@gmail.com">
-						    </div>
-						    <div class="input-row">
-						      <label>Username</label>
-						      <input type="text" placeholder="goRatchet">
-						    </div>
-						  </div>
-						</form>
-					</div>
-				</div>
-
-				<nav class="bar-tab">
-				  <ul class="tab-inner">
-				    <li class="tab-item active">
-				      <a href="#/form">
-				        <img class="tab-icon" src="/images/icon-home.png">
-				        <div class="tab-label">Profile</div>
-				      </a>
-				    </li>
-				    <li class="tab-item">
-				      <a href="#/form/settings">
-				        <img class="tab-icon" src="/images/icon-settings.png">
-				        <div class="tab-label">Settings</div>
-				      </a>
-				    </li>
-				  </ul>
-				</nav>
-		    </div>
+	<div class="content" >
+		<div class="content-padded">
+			<form>
+			  <div class="input-group">
+			    <div class="input-row">
+			      <label>Full name</label>
+			      <input type="text" placeholder="Mister Ratchet">
+			    </div>
+			    <div class="input-row">
+			      <label>Email</label>
+			      <input type="email" placeholder="ratchetframework@gmail.com">
+			    </div>
+			    <div class="input-row">
+			      <label>Username</label>
+			      <input type="text" placeholder="goRatchet">
+			    </div>
+			  </div>
+			</form>
+		</div>
+	</div>
+	
+	<div data-role="footer" data-id="formFooter" data-position="fixed">
+		<div data-role="navbar">
+		  <ul class="tab-inner">
+		    <li class="tab-item active">
+		      <a ngm-tap="nav('/form')" data-icon="grid" class="ui-btn-active">Profile</a>
+		    </li>
+		    <li class="tab-item">
+		    	<a ngm-tap="nav('/form/settings')" data-icon="grid">Settings</a>
+		    </li>
+		  </ul>
+		</div>
+	</div>
+</div>

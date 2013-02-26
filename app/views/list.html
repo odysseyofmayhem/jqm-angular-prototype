@@ -1,18 +1,19 @@
-<div class="page" data-role="page" ng-controller="listCtrl" data-add-back-btn="true">
-		    	<div data-role="header">
-				  
-				  <h1 class="title">List View</h1>
-				</div>
+<!-- List template -->
+<div class="page ng-cloak" data-role="page" id="list" ng-controller="listCtrl" data-add-back-btn="true">
+	<div data-role="header" class="status-bar">
+	  <div class="status-header-yellow">{{settings.userType}}</div>
+	  <h1 class="title">List View</h1>
+	</div>
 
-				<div class="content">
-					<ul data-role="listview">
-						<li ng-repeat="dataItem in dataSet">
-						    <a ng-href="/list/{{dataItem.id}}" ng-click="selectRecord($index)">
-						      {{dataItem.firstname}} {{dataItem.lastname}}
-						      <span class="chevron"></span>
-						    </a>
-					  	</li>
-					</ul>
-					
-				</div>
-		    </div>
+	<div class="content" >
+		<ul data-role="listview">
+			<li ng-repeat="dataItem in users.dataSet">
+			    <a ngm-tap="selectRecord($index, dataItem.id)">
+			      {{dataItem.firstname}} {{dataItem.lastname}}
+			      <span class="chevron"></span>
+			    </a>
+		  	</li>
+		</ul>
+		
+	</div>
+</div>

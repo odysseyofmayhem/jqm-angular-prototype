@@ -4,31 +4,31 @@ app.config(function ($routeProvider, $locationProvider) {
   $locationProvider.html5Mode(false);
   $routeProvider
     .when('/', {
-      templateUrl:'#home',
+      templateUrl:'/views/home.html',
       jqmOptions: { transition: 'slide' }
     })
     .when('/info', {
-      templateUrl:'#info',
+      templateUrl:'/views/info.html',
       jqmOptions: { transition: 'pop' }
     })
 
     .when('/form', {
-      templateUrl:'#form',
+      templateUrl:'/views/form.html',
       hasChildren: '/form',
       jqmOptions: { transition: 'slide' }
     })
     .when('/form/settings', {
-      templateUrl:'#form_settings',
+      templateUrl:'/views/form_settings.html',
       childOf: '/form',
       jqmOptions: { transition: 'slide' }
     })
 
     .when('/list', {
-      templateUrl:'#list',
+      templateUrl:'/views/list.html',
       jqmOptions: { transition: 'slide' }
     })
     .when('/list/:recordId', {
-      templateUrl:'#list_detail',
+      templateUrl:'/views/list_detail.html',
       jqmOptions: { transition: 'slide' }
     })
     

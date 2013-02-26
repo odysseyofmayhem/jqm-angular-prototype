@@ -1,39 +1,41 @@
-<div class="page" data-role="page">
-		    	<div data-role="header">
-				  <a class="button" href="/info" data-direction="reverse">Info</a>
-				  <h1>App Home</h1>
-				</div>
+<!-- Home template -->
+<div class="page ng-cloak" data-role="page" id="home" ng-controller="homeCtrl">
+	<div data-role="header" class="status-bar">
+	  <div class="status-header-black">{{settings.userType}}</div>
+	  <a class="button" data-direction="reverse" ngm-tap="nav('/info')">Info</a>
+	  <h1>App Home</h1>
+	</div>
 
-				<div class="content">
-    				<div class="content-padded">
-						<div class="homeButton">
-							<a href="/#!/form" data-prefetch>
-								<img src="/images/homeicons/MYMDL.png" alt="Weather"><span>Profile</span>
-							</a>
-						</div>
-						<div class="homeButton">
-							<a href="/#!/list" data-prefetch>
-								<img src="/images/homeicons/bab.png" alt="Weather"><span>List</span>
-							</a>
-						</div>
-						<div class="homeButton">
-							<a href="#">
-								<img src="/images/homeicons/weather.png" alt="Weather"><span>Button</span>
-							</a>
-						</div>
-						<div class="homeButton">
-							<a href="#">
-								<img src="/images/homeicons/events.png" alt="Weather"><span>Button</span>
-							</a>
-						</div>
-						<div class="homeButton">
-							<a href="#">
-								<img src="/images/homeicons/offers.png" alt="Weather"><span>Button</span>
-							</a>
-						</div>
+	<div class="content">
+		<div class="content-padded">
+			<div class="homeButton">
+				<a ngm-tap="nav('/form')">
+					<img src="/images/homeicons/MYMDL.png" alt="Weather"><span>Profile</span>
+				</a>
+			</div>
+			<div class="homeButton">
+				<a ngm-tap="nav('/list')">
+					<img src="/images/homeicons/bab.png" alt="Weather"><span>List</span>
+				</a>
+			</div>
+			<div class="homeButton">
+				<a href="#">
+					<img src="/images/homeicons/weather.png" alt="Weather"><span>Button</span>
+				</a>
+			</div>
+			<div class="homeButton">
+				<a href="#">
+					<img src="/images/homeicons/events.png" alt="Weather"><span>Button</span>
+				</a>
+			</div>
+			<div class="homeButton">
+				<a href="#">
+					<img src="/images/homeicons/offers.png" alt="Weather"><span>Button</span>
+				</a>
+			</div>
 
 
 
-					</div>
-				</div>
-		    </div>
+		</div>
+	</div>
+</div>
